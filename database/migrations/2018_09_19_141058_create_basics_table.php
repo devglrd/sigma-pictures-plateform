@@ -18,11 +18,14 @@ class CreateBasicsTable extends Migration
             $table->string('file');
             $table->string('type');
             $table->integer('fk_user_id');
-            $table->integer('fk_recever_id');
             $table->string("name");
             $table->string("slug");
             $table->longText("content");
             $table->timestamps();
+        });
+    
+        Schema::table('users', function (Blueprint $table) {
+            $table->integer('is_admin');
         });
     }
     
