@@ -25,8 +25,14 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
-
+    protected $redirectTo = '/';
+    
+    
+    public function showLoginForm()
+    {
+        return view('app.entities.auth.login');
+    }
+    
     /**
      * Create a new controller instance.
      *

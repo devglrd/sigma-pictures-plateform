@@ -21,14 +21,6 @@ class StaticsController extends Controller
         return view("app.entities.statics.home");
     }
 
-    public function showAddUser(Request $request)
-    {
-        return view("app.entities.admin.addUser");
-    }
-
-    public function showEditUser(Request $request)
-    {
-        return view("app.entities.admin.editUser");
-    }
+    
 }
 

@@ -5,7 +5,7 @@
 @stop
 
 @section('content')
-
+    
     <div class="container col-md-6">
         <div class="raw text-center">
             <form class="form-signin">

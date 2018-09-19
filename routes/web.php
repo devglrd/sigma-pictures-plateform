@@ -13,25 +13,36 @@
 
 Route::get('/test', ['uses' => "App\StaticsController@test"]);
 
-Route::get('/user/add', ['uses' => "App\StaticsController@showAddUser"]);
+//Auth::routes();
 
-Route::get('/user/edit/{id}', ['uses' => "App\StaticsController@showEditUser"]);
 
 Route::get('/', ['uses' => "App\StaticsController@showHome"]);
+Route::get('/logout', function (){
+    if (Auth::check()){
+        Auth::logout();
+        return redirect()->back();
+    }
+})->name('logout');
 
-Route::get('/admin/login', ['uses' => "App\AdminController@showLoginAdmin"]);
+
+Route::get('/login', ['uses' => "Auth\LoginController@showLoginForm"]);
+Route::post('/login', ['uses' => "Auth\LoginController@login"]);
+//Route::get('/register', ['uses' => "Auth\RegisterController@showRegistrationForm"]);
+Route::post('/register', ['uses' => "Auth\RegisterController@register"]);
+Route::post('/password/request', ['uses' => "Auth\ForgotPasswordController@showLinkRequestForm"]);
 
 
 //FILES
-Route::get('/file/{filename}', ["uses" => "App\Files\FilesController@showAFile"])->where('filename', '^[^/]+$');
-Route::post('/file/{filename}', ["uses" => "App\Files\FilesController@postFile"])->where('filename', '^[^/]+$');
-Route::get('/get/files/{token}/{password}', 'Admin\FileController@downloadFile');
-
-Route::get('/admin/delete', ['uses' => "App\AdminController@showDeleteUser"]);
+Route::prefix('/file')->group(function () {
+    Route::get('/account', ["uses" => "App\Files\FilesController@showUserFile"]);
+    Route::get('/{filename}', ["uses" => "App\Files\FilesController@showAFile"])->where('filename', '^[^/]+$');
+    Route::post('/{filename}', ["uses" => "App\Files\FilesController@postFile"])->where('filename', '^[^/]+$');
+    Route::get('/get/{token}/{password}', 'Admin\FileController@downloadFile');
+});
 //Example de route
 
 //USER
 Route::get('/account/user/{id}/password', ['uses' => "App\User\UserController@c"]);
 
-Auth::routes();
+
 

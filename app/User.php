@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Models;
+namespace App;
 
+use App\Models\File;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -26,8 +27,8 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
     
-    public function getFile()
+    public function getFiles()
     {
-        return $this->hasOne(File::class, "fk_user_id", "id");
+        return $this->hasMany(File::class, "fk_user_id", "id");
     }
 }
