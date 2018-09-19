@@ -13,6 +13,7 @@
 
 Route::get('/test', ['uses' => "App\StaticsController@test"]);
 
+Route::get('/addUser', ['uses' => "App\StaticsController@showAddUser"]);
 
 Route::get('/', ['uses' => "App\StaticsController@showHome"]);
 
