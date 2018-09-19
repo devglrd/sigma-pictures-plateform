@@ -4,3 +4,9 @@ body{
 .form-control {
     margin-bottom: 20px;
 }
+#btnlogin {
+    border-bottom-width: 3px !important;
+    border-top-width: 3px !important;
+    border-left-width: 3px !important;
+    border-right-width: 3px !important;
+}
