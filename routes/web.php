@@ -16,6 +16,7 @@ Route::get('/test', ['uses' => "App\StaticsController@test"]);
 
 Route::get('/', ['uses' => "App\StaticsController@showHome"]);
 
+Route::get('/admin/login', ['uses' => "App\AdminController@showLoginAdmin"]);
 //Example de route
 
 Auth::routes();
