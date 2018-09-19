@@ -12,6 +12,13 @@ class StaticsController extends Controller
     //Example de controller
     public function test(Request $request)
     {
-        return view('app.home');
+        return view('ma vue');
+    }
+    
+    
+    public function showHome(Request $request)
+    {
+        return view("app.entities.statics.home");
     }
 }
+

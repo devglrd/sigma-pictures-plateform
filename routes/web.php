@@ -11,13 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/test', ['uses' => "App\StaticsController@test"]);
+
+
+Route::get('/', ['uses' => "App\StaticsController@showHome"]);
 
 //Example de route
-Route::get('/test', ['uses' => "App\StaticsController@test"]);
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
