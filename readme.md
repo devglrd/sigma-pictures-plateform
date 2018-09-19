@@ -23,3 +23,6 @@ Ensuite rentré vos identifiants base de donnée, dans le ``.env``
 
 
 Pour faire tourner votre serveur local faite la commande suivant dans le **dosier du projet** => ``php artisan serve``
+
+
+ryryfg
