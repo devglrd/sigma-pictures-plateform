@@ -12,9 +12,9 @@
                 <h1 class="h3 mb-3 font-weight-normal">Connexion Administrateur</h1>
                 <div class="offset-md-2 col-md-8">
                     <label for="inputEmail" class="sr-only">Adresse email</label>
-                    <input type="email" id="inputEmail" class="form-control" placeholder="Adresse email" required autofocus>
+                    <input type="email" id="inputEmail" class="form-control mb-md-3" placeholder="Adresse email" required autofocus>
                     <label for="inputPassword" class="sr-only">Mot de passe</label>
-                    <input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe" required>
+                    <input type="password" id="inputPassword" class="form-control mb-md-3" placeholder="Mot de passe" required>
                     <!-- Penser à placer la route pour la récupération du mot de passe Admion ICI -->
                     <p>Mot de passe oublié ? Cliquez <a href="PLACER UNE ROUTE ICI">ici</a></p>
                     <div class="checkbox mb-3">
