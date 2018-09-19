@@ -21,3 +21,17 @@ Route::get('/', ['uses' => "App\StaticsController@showHome"]);
 
 Route::get('/admin/login', ['uses' => "App\AdminController@showLoginAdmin"]);
 
+
+//FILES
+Route::get('/file/{filename}', ["uses" => "App\Files\FilesController@showAFile"])->where('filename', '^[^/]+$');
+Route::post('/file/{filename}', ["uses" => "App\Files\FilesController@postFile"])->where('filename', '^[^/]+$');
+Route::get('/get/files/{token}/{password}', 'Admin\FileController@downloadFile');
+
+Route::get('/admin/delete', ['uses' => "App\AdminController@showDeleteUser"]);
+//Example de route
+
+//USER
+Route::get('/account/user/{id}/password', ['uses' => "App\User\UserController@c"]);
+
+Auth::routes();
+
