@@ -18,7 +18,7 @@
                     <label for="inputEmail" class="sr-only">Adresse mail</label>
                     <input type="email" id="inputEmail" class="form-control mb-md-3" placeholder="Adresse mail" required autofocus>
                     <!--<button id="btnlogin" class="btn btn-lg btn-block btn btn-outline-info mb-md-3" type="button">Ajouter</button>-->
-                    <button id="btnlogin" class="btn btn-lg btn-block btn btn-outline-info" type="submit">Se connecter</button>
+                    <button id="btnlogin" class="btn btn-lg btn-block btn btn-outline-info" type="submit">Ajouter</button>
                 </div>
                 <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
             </form>
