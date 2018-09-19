@@ -1,0 +1,17 @@
+<?php
+
+namespace App\Http\Controllers\App;
+
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+
+class StaticsController extends Controller
+{
+    
+    
+    //Example de controller
+    public function test(Request $request)
+    {
+        return view('app.home');
+    }
+}

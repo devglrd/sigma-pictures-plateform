@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+//Example de route
+Route::get('/test', ['uses' => "App\StaticsController@test"]);
