@@ -18,6 +18,7 @@ Route::get('/', ['uses' => "App\StaticsController@showHome"]);
 
 Route::get('/admin/login', ['uses' => "App\AdminController@showLoginAdmin"]);
 
+<<<<<<< Updated upstream
 
 //FILES
 
@@ -25,6 +26,10 @@ Route::get('/file/{filename}', ["uses" => "App\Files\FilesController@showAFile"]
 Route::post('/file/{filename}', ["uses" => "App\Files\FilesController@postFile"])->where('filename', '^[^/]+$');
 Route::get('/get/files/{token}/{password}', 'Admin\FileController@downloadFile');
 
+=======
+Route::get('/admin/delete', ['uses' => "App\AdminController@showDeleteUser"]);
+//Example de route
+>>>>>>> Stashed changes
 
 Auth::routes();
 
