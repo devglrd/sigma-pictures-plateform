@@ -12,7 +12,7 @@ Une fois dans votre htdocs, faite git clone https://github.com/glrd78/-sigma-pic
 <br>
 
 Ensuite faite un cd -sigma-pitcures-plateform pour rentré dans le dossier, une fois dans le dossier faite la commande 
-``**cp .env.exemple .env**``
+``cp .env.exemple .env``
 <br>
 Cette commande sert a copier coller le fichier ``.env.example``
 <br>
