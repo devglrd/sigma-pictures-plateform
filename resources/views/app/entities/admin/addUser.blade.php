@@ -16,10 +16,8 @@
                     <label for="inputfirstname" class="sr-only">Prénom</label>
                     <input type="email" id="inputfirstname" class="form-control mb-md-3" placeholder="Prénom" required autofocus>
                     <label for="inputEmail" class="sr-only">Adresse mail</label>
-                    <input type="email" id="inputEmail" class="form-control" placeholder="Adresse mail" required autofocus>
-                    <br>
-                    <button id="btnlogin" class="btn btn-lg btn-block btn btn-outline-info" type="button">Ajouter</button>
-                    <br>
+                    <input type="email" id="inputEmail" class="form-control mb-md-3" placeholder="Adresse mail" required autofocus>
+                    <!--<button id="btnlogin" class="btn btn-lg btn-block btn btn-outline-info mb-md-3" type="button">Ajouter</button>-->
                     <button id="btnlogin" class="btn btn-lg btn-block btn btn-outline-info" type="submit">Se connecter</button>
                 </div>
                 <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
