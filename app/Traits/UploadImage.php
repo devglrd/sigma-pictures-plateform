@@ -9,7 +9,7 @@ use Intervention\Image\Facades\Image;
 
 trait UploadImage
 {
-    function uploadImage($image, $name, $width = null, $height = null, $format = false)
+    function uploadImage($image, $name, $content, $slug, $width = false, $height = false, $format = false)
     {
         $img = Image::make($image);
         
@@ -42,7 +42,7 @@ trait UploadImage
         }
         $img->save($path);
         
-        return $this->saveImageToDb($pathDb, $img->mime());
+        return $this->saveImageToDb($pathDb, $img->mime(), $content, $slug, $name);
     }
     
     function getFolderName()
@@ -65,9 +65,12 @@ trait UploadImage
         ];
     }
     
-    function saveImageToDb($filename, $type)
+    function saveImageToDb($filename, $type, $name, $content, $slug)
     {
         $file = File::create([
+            'name'       => $name,
+            'content'       => $content,
+            'slug'       => $slug,
             'file'       => $filename,
             'type'       => $type,
             'fk_user_id' => Auth::check() ? Auth::user()->id : 0,

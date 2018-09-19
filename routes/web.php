@@ -34,9 +34,11 @@ Route::post('/password/request', ['uses' => "Auth\ForgotPasswordController@showL
 
 //FILES
 Route::prefix('/file')->group(function () {
+    
+    Route::get('/create', ["uses" => "App\Files\FilesController@create"]);
     Route::get('/account', ["uses" => "App\Files\FilesController@showUserFile"]);
     Route::get('/{filename}', ["uses" => "App\Files\FilesController@showAFile"])->where('filename', '^[^/]+$');
-    Route::post('/{filename}', ["uses" => "App\Files\FilesController@postFile"])->where('filename', '^[^/]+$');
+    Route::post('/', ["uses" => "App\Files\FilesController@postFile"]);
     Route::get('/get/{token}/{password}', 'Admin\FileController@downloadFile');
 });
 //Example de route

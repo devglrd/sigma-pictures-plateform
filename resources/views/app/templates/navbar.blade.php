@@ -3,7 +3,7 @@
             Sigma Project
         </a></h5>
     <nav class="my-2 my-md-0 mr-md-3">
-        <a class="p-2 text-dark" href="#">Ajouter un fichier</a>
+        <a class="p-2 text-dark" href="{{ action('App\Files\FilesController@create') }}">Ajouter un fichier</a>
     </nav>
     @if(Auth::user()->is_admin)
         <a class="btn btn-outline-success mr-2 {{ Route::is('admin') ? "active" : "" }}" href="{{ action('App\AdminController@dashboard') }}">Administration</a>
