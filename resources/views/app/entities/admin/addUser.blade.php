@@ -12,7 +12,7 @@
                 <h1 class="h3 mb-3 font-weight-normal">Création d'un Utilisateur</h1>
                 <div class="offset-md-2 col-md-8  ">
                     <label for="inputname" class="sr-only">Nom</label>
-                    <input type="email" id="inputname" class="form-control mb-md-3" placeholder="nom" required autofocus>
+                    <input type="email" id="inputname" class="form-control mb-md-3" placeholder="Nom" required autofocus>
                     <label for="inputfirstname" class="sr-only">Prénom</label>
                     <input type="email" id="inputfirstname" class="form-control mb-md-3" placeholder="Prénom" required autofocus>
                     <label for="inputEmail" class="sr-only">Adresse mail</label>
