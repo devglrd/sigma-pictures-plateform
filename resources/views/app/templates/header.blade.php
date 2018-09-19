@@ -15,3 +15,12 @@
     @yield('top-js')
 </head>
 <body class="@yield('bodyClass')">
+
+
+<section class="customClass">
+    <div class="container">
+        <div class="row">
+            <div class="col justify-content-center align-items-start d-flex"></div>
+        </div>
+    </div>
+</section>
