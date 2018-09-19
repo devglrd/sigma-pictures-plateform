@@ -13,9 +13,9 @@
 
 Route::get('/test', ['uses' => "App\StaticsController@test"]);
 
-Route::get('/addUser', ['uses' => "App\StaticsController@showAddUser"]);
+Route::get('/user/add', ['uses' => "App\StaticsController@showAddUser"]);
 
-Route::get('/editUser', ['uses' => "App\StaticsController@showEditUser"]);
+Route::get('/user/edit/{id}', ['uses' => "App\StaticsController@showEditUser"]);
 
 Route::get('/', ['uses' => "App\StaticsController@showHome"]);
 
