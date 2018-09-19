@@ -5,6 +5,8 @@
 /vendor
 /public/js/*
 /public/css/*
+./public/js/*
+./public/css/*
 /.idea
 /.vscode
 /.vagrant
