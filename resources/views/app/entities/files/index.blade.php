@@ -9,10 +9,18 @@
     <section>
         <div class="container">
             <div class="row">
-                <div class="col d-flex justify-content-center align-items-start">
-                    Display tout les fichiers de l'utilsateur
+                <div class="col d-flex justify-content-center align-items-center flex-column">
+                    <h4>
+                        Display tout les fichiers de l'utilsateur
+                    </h4>
+                    <br>
+                    <br>
                     @foreach(Auth::user()->getFiles as $file)
-                        {{ $file->name }}
+                        <a href="{{ asset($file->file) }}" target="_blank">
+                            Fichier # {{ $file->id }} : {{ $file->name }}
+                        </a>
+                        <br>
+                        
                     @endforeach
                 </div>
             </div>
