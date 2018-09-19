@@ -17,3 +17,7 @@ Route::get('/', function () {
 
 //Example de route
 Route::get('/test', ['uses' => "App\StaticsController@test"]);
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
