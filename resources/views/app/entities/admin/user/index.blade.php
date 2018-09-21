@@ -5,7 +5,7 @@
 @stop
 
 @section('content')
-
+    
     <div class="container col-md-10 base">
         <h1 class="h3 mb-3 font-weight-normal text-center">Liste des utilisateurs</h1>
         <div class="raw text-center">
