@@ -5,6 +5,7 @@
 @stop
 
 @section('content')
+    @include("app.partials.navbarAdmin")
     <section class="dashboard">
         <div class="container">
             <div class="row">
