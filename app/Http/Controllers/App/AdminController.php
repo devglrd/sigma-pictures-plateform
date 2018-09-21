@@ -16,6 +16,10 @@ class AdminController extends Controller
     {
         return view('app.entities.admin.login');
     }
+    public function showAdminList()
+    {
+        return view('app.entities.admin.UserList');
+    }
     
     public function showAddUser(Request $request)
     {

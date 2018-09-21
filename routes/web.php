@@ -24,6 +24,7 @@ Route::get('/logout', function (){
     }
 })->name('logout');
 
+Route::get('/admin/login', ['uses' => "App\AdminController@showLoginAdmin"]);
 
 Route::get('/login', ['uses' => "Auth\LoginController@showLoginForm"]);
 Route::post('/login', ['uses' => "Auth\LoginController@login"]);

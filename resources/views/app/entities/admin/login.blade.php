@@ -11,8 +11,13 @@
             <form class="form-signin">
                 <h1 class="h3 mb-3 font-weight-normal">Connexion Administrateur</h1>
                 <div class="offset-md-2 col-md-8">
+
                     <label for="inputEmail" class="sr-only">Adresse email</label>
                     <input type="email" id="inputEmail" class="form-control mb-md-3" placeholder="Adresse email" required autofocus>
+
+                    <label for="inputEmail" class="sr-only">Adresse mail</label>
+                    <input type="email" id="inputEmail" class="form-control" placeholder="Adresse mail" required autofocus>
+
                     <label for="inputPassword" class="sr-only">Mot de passe</label>
                     <input type="password" id="inputPassword" class="form-control mb-md-3" placeholder="Mot de passe" required>
                     <!-- Penser à placer la route pour la récupération du mot de passe Admion ICI -->
