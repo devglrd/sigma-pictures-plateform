@@ -27,11 +27,27 @@
                         <td>{{ $user->email }} {{ Auth::user()->email ===  $user->email ? "(Vous)" : ""}}</td>
                         <td>{{ $user->first_name }}</td>
                         <td>{{ $user->last_name }}</td>
-                        <td class="{{ $user->is_admin ? "text-success" : "" }}">{{ $user->is_admin ? "Admin" : "Membre normal" }}</td>
+                        <td class="{{ $user->is_admin ? "text-success" : "" }}">
+                            @if($user->is_admin > 1)
+                                Super Admin
+                            @elseif($user->is_admin === 1)
+                                Admin
+                            @else
+                                Membre normal
+                            @endif
+                        </td>
                         <td>
                             @if(!$user->is_admin)
-                                <a href="{{ action('App\AdminController@editUser', $user->id) }}" class="btn btn-outline-warning mr-2">Modifier</a>
-                                <a href="{{ action('App\AdminController@deleteUser', $user->id) }}" class="btn btn-outline-danger">Supprimer</a>
+                                <a href="{{ action('App\AdminController@editUser', $user->id) }}"
+                                   class="btn btn-outline-warning mr-2">Modifier</a>
+                                <a href="{{ action('App\AdminController@deleteUser', $user->id) }}"
+                                   class="btn btn-outline-danger">Supprimer</a>
+                            @endif
+                            @if($user->is_admin === 1)
+                                <a href="{{ action('App\AdminController@editUser', $user->id) }}"
+                                   class="btn btn-outline-warning mr-2">Modifier</a>
+                                <a href="{{ action('App\AdminController@deleteUser', $user->id) }}"
+                                   class="btn btn-outline-danger">Supprimer</a>
                             @endif
                         </td>
                     </tr>
