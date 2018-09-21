@@ -17,15 +17,15 @@ Route::get('/test', ['uses' => "App\StaticsController@test"]);
 
 
 Route::get('/', ['uses' => "App\StaticsController@showHome"]);
-Route::get('/logout', function (){
-    if (Auth::check()){
+Route::get('/logout', function () {
+    if (Auth::check()) {
         Auth::logout();
-        return redirect()->back();
+        return redirect("/");
     }
 })->name('logout');
 
 Route::get('/admin/login', ['uses' => "App\AdminController@showLoginAdmin"]);
-
+Route::get('/users/account/display-account/{token}', ['uses' => "App\AccountController@showAccount"]);
 Route::get('/login', ['uses' => "Auth\LoginController@showLoginForm"]);
 Route::post('/login', ['uses' => "Auth\LoginController@login"]);
 //Route::get('/register', ['uses' => "Auth\RegisterController@showRegistrationForm"]);

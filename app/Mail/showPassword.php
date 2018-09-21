@@ -16,9 +16,9 @@ class showPassword extends Mailable
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($user)
     {
-        //
+        $this->user = $user;
     }
 
     /**
@@ -28,6 +28,11 @@ class showPassword extends Mailable
      */
     public function build()
     {
-        return $this->view('view.name');
+        return $this->from('contact@sigma-project.fr')
+            ->subject('Recuperer votre password !')
+            ->markdown('app.entities.mails.password')
+            ->with([
+                'user' => $this->user
+            ]);
     }
 }
