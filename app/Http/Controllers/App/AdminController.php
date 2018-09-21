@@ -25,7 +25,7 @@ class AdminController extends Controller
     
     public function showAddUser(Request $request)
     {
-        return view("app.entities.admin.addUser");
+        return view("app.entities.admin.user.create");
     }
     
     public function editUser(Request $request, $id)
