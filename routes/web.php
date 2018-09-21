@@ -30,7 +30,9 @@ Route::get('/login', ['uses' => "Auth\LoginController@showLoginForm"]);
 Route::post('/login', ['uses' => "Auth\LoginController@login"]);
 //Route::get('/register', ['uses' => "Auth\RegisterController@showRegistrationForm"]);
 Route::post('/register', ['uses' => "Auth\RegisterController@register"]);
-Route::post('/password/request', ['uses' => "Auth\ForgotPasswordController@showLinkRequestForm"]);
+Route::get('/password/request', ['uses' => "Auth\ForgotPasswordController@showLinkRequestForm"]);
+Route::post('/password/request', ['uses' => "App\AccountController@sendRequestLink"]);
+
 
 
 //FILES

@@ -17,9 +17,9 @@ class ForgotPasswordController extends Controller
     | your application to your users. Feel free to explore this trait.
     |
     */
-
+    
     use SendsPasswordResetEmails;
-
+    
     /**
      * Create a new controller instance.
      *
@@ -28,5 +28,11 @@ class ForgotPasswordController extends Controller
     public function __construct()
     {
         $this->middleware('guest');
+    }
+    
+    
+    public function showLinkRequestForm()
+    {
+        return view('app.entities.auth.passwords.email');
     }
 }
